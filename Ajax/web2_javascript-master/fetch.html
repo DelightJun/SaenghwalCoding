@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <article>
+
+    </article>
+    <input type="button" value="fetch" onclick="
+        // fetch('css').then(function(response){
+        //     response.text().then(function(text){
+        //         document.querySelector('article').innerHTML = text;
+        //     })
+        // })
+          function callbackme() {
+            console.log('response end');
+          }  
+          fetch('css').then(callbackme);
+          console.log(1);
+          console.log(2);
+        ">
+</body>
+
+</html>
+
+<!--
+css로부터 text를 가져와, fetch를 눌렀을 때 동작(alert 혹은 innerHTML) 등을 실현할 수 있다.
+fetch('javascript')하면 client가 server에게 javascript를 요청하는 것이다.
+then은 server 응답하는 데에 걸리는 시간동안 컴퓨터가 다른 것을 할 수 있도록 해준다.
+응답이 될 준비, 응답이 완료되면 then 안의 코드를 실행하게 된다. 여기선 callbackme()이다.
+F12 후 Network를 누르고 ESC를 누르면 console 화면까지 동시에 볼 수 있다.
+Asynchronous, 비동기적으로 실행된다.
+동기적으로 실행된다면 console.log(1);와 console.log(2);가 callbackme()와 동시에 실행되지 않는다. 응답을 불러오는 동안 console.log가 실행되지 않는 것.
+허나 비동기적으로 실행된다면 fetch를 통해 응답을 불러오는 동안, console.log(1);와 console.log(2);가 실행되고 그 다음에 callbackme()가 실행된다.
+동기라고 한다면 순서대로 같이 간다라고 생각해보자.
+
+-->

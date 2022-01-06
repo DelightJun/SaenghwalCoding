@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>생활코딩 - JavaScript_Array</title>
+</head>
+
+<body>
+    <h1>Array</h1>
+    <h2>Syntax</h2>
+    <script>
+        var coworkers = ["egoing", "leezche"];
+    </script>
+    <h2>GET</h2>
+    <script>
+        document.write(coworkers[0]);
+        document.write(coworkers[1]);
+    </script>
+    <h2>COUNT</h2>
+    <script>
+        document.write(coworkers.length);
+    </script>
+    <h2>ADD</h2>
+    <script>
+        coworkers.push("taeho", "seungjun", "metamong");
+        document.write(coworkers.length);
+    </script>
+
+    <hr>
+
+    <h1>Loop</h1>
+    <ul>
+        <script>
+            document.write('<li>1</li>');
+            var i = 0;
+            while (i < 3) {
+                document.write('<li>2</li>');
+                document.write('<li>3</li>');
+                /* i = i + 1; */
+                i++;
+            }
+            document.write('<li>4</li>');
+        </script>
+    </ul>
+
+    <hr>
+
+    <h1>Loop & Array</h1>
+    <h2>Co-workers</h2>
+    <ul>
+        <script>
+            var coworkers = ["egoing", "leezche", "duru", "taeho"];
+            i = 0;
+            while (i < coworkers.length) {
+                document.write('<li>'+coworkers[i]+'</li>');
+                i++;
+            }
+        </script>
+    </ul>
+</body>
+
+</html>
+
+
+
+
+<!-- 
+var coworkers = ["egoing", "leezche"];과 같은 모양이 배열이다.
+push를 통해 data를 추가할 수 있다.
+length를 통해 배열 안의 data 갯수를 알 수 있다.
+while() 괄호 안의 조건이 true이면 {} 안의 코드들이 반복해서 실행된다. 반복되다가 false를 만나면 밖의 코드를 실행하게 된다.
+
+document.querySelectorAll('a');를 통해 a 태그를 모두 선택할 수 있다. 이는 배열 형식으로 저장된다.
+-->

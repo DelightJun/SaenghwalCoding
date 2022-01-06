@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>생활코딩 - CSS</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+
+      ol {
+        border-right: 1px solid gray;
+        width: 90px;
+        margin-right: 100px;
+        margin-top: 5px;
+      }
+
+      #grid {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
+
+      h2 {
+        margin-top: 0px;
+      }
+
+      @media (max-width: 800px) {
+        hr {
+          display: none;
+        }
+
+        #grid {
+          display: block;
+        }
+
+        ol {
+          border-right: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>WEB</h1>
+    <hr />
+    <div id="grid">
+      <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ol>
+
+      <div id="paragraph">
+        <h2>Something</h2>
+        <p>I want to be a nice developer</p>
+      </div>
+    </div>
+  </body>
+</html>

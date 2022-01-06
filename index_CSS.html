@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>생활코딩 - HTML/CSS</title>
+    <style>
+      h1 {
+        text-align: center;
+        font-size: 45px;
+        padding: 20px;
+        margin: 0px;
+        border-bottom: 2px solid gray;
+      }
+
+      ol {
+        border-right: 2px solid gray;
+        width: 90px;
+        margin-top: 5px;
+        margin-left: 20px;
+        padding: 5px;
+      }
+
+      #grid {
+        border: 5px solid pink;
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
+
+      p {
+        margin: 0px;
+      }
+
+      @media (max-width: 800px) {
+        #grid {
+          display: block;
+        }
+        ol {
+          border-right: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <h1>생활코딩 CSS 연습하기</h1>
+    </div>
+    <div id="grid">
+      <div>
+        <ol>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ol>
+      </div>
+      <div>
+        <a
+          href="http://metamong.shop/"
+          target="_blank"
+          title="나홀로 메모장 Ver2.0"
+          >나홀로 메모장 Ver2.0</a
+        >
+        <p>Hello, Metamong!</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- [CSS]
+,를 이용해 h1과 a의 스타일을 동시에 결정할 수 있다.
+content 밖에 padding, 그 다음 경계선 border, 그 밖이 margin
+target="_blank"를 통해서 클릭 시 새 창에 링크창이 열리게 할 수 있다.
+title=""로 툴팁(마우스를 갖다대면 간략한 정보를 보여주는 것)을 생성할 수 있다. 
+span은 Inline(줄바꿈 X), div는 block-level(줄바꿈 O)
+style에서 border를 통해 그 content의 크기를 알 수 있다.
+canIuse 사이트를 통해 해당 기술이 얼마나 많이 쓰이고 있는지 알 수 있다.
+grid를 통해서 columns를 정렬할 수 있다.
+반응형 디자인 : 화면의 크기에 따라 웹페이지의 각 요소들이 반응하는 것. 클라이언트의 반응에 따라 웹페이지가 알아서 바뀐다.
+-미디어 쿼리-
+@media(min-width:800px) : 최소 800px부터 해당 코드가 발휘된다.
+@media(max-width:800px) : 최대 800px까지 해당 코드가 발휘된다.
+style 부분을 style.css로 따로 저장하고, <link rel="stylesheet" href="style.css">를 넣으면 여러 Index.html을 생성할 때 중복을 줄일 수 있다.
+cashing을 통해 속도 또한 높힐 수 있다.
+-->

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>생활코딩 - JavaScript_Object</title>
+    <script src="color.js"></script>
+</head>
+
+<body>
+    <h1>Object</h1>
+    <input type="button" value="night" onclick="nightDayHandler(this)">
+    <h2>To Create Object</h2>
+    <script>
+        var coworkers = {
+            "programmer": "egoing", "designer": "leezche"
+        };
+        document.write("programmer : " + coworkers.programmer + '<br>');
+        document.write("designer : " + coworkers.designer + '<br>');
+        coworkers.bookkeeper = "duru";
+        document.write("bookkeeper : " + coworkers.bookkeeper + '<br>');
+        coworkers["data scientist"] = "taeho";
+        document.write("data scientist : " + coworkers["data scientist"] + '<br>');
+    </script>
+
+    <hr>
+
+    <h2>Iterate</h2>
+    <script>
+        for (var key in coworkers) {
+            document.write(key + " : " + coworkers[key] + '<br>');
+        }
+    </script>
+
+    <hr>
+
+    <h2>Property & Method</h2>
+    <script>
+        coworkers.showAll = function () {
+            for (var key in this) {
+                document.write(key + " : " + this[key] + '<br>');
+            }
+        }
+
+        coworkers.showAll();
+    </script>
+</body>
+
+</html>
+
+<!--
+객체는 중괄호 {}, 배열은 대괄호 []
+coworkers.bookkeeper = "duru";, coworkers["data scientist"] = "taeho";로 객체에 data를 추가할 수 있다.
+객체에서는 key, 배열에서는 index로 보통 지칭한다.
+key는 coworkers 안의 값들 내에서 순서내로 셋팅되게 된다.
+key는 programmer, designer 등이고 coworkers[key]는 key의 값들을 지칭하게 된다.
+
+coworkers.showAll = function() {} 로도 함수를 지정할 수 있다.
+programmer, designer들을 변수라고 하지 않고 property라고 한다.
+showAll처럼 객체에 소속된 함수를 Method라고 한다.
+-->

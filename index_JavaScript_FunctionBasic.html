@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>생활코딩 - JavaScript_FunctionBasic</title>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <h1>Function</h1>
+    <h2>Basic</h2>
+    <ul>
+        <script>
+            function two() {
+                document.write('<li>2-1</li>');
+                document.write('<li>2-2</li>');
+            }
+            document.write('<li>1</li>');
+            two();
+            document.write('<li>3</li>');
+            two();
+        </script>
+    </ul>
+
+    <hr>
+
+    <h2>Parameter & Argument</h2>
+    <script>
+        function onePlusOne() {
+            document.write(1 + 1 + '<br>');
+        }
+        onePlusOne();
+        function sum(left, right) {
+            document.write(left + right + '<br>');
+        }
+        sum(2, 3);
+        sum(3, 4);
+    </script>
+
+    <hr>
+
+    <h2>Return </h2>
+        <script>
+            function sum2(left, right) {
+                return left + right;
+            }
+            document.write(sum2(2,3)+'<br>');
+            document.write('<div style="color:red">'+sum2(2,3)+'</div>');
+            document.write('<div style="font-size:3rem;">'+sum2(2,3)+'</div>');
+        </script>
+</body>
+
+</html>
+
+<!-- 
+    function sum(left, right) {
+    document.write(left + right + '<br>');
+}
+sum(2, 3);
+sum(3, 4);
+여기서 함수로 전달하는 값, 2와 3같은 것들을 인자(Argument)라고 하며(입력이다) 함수 안으로 매개해주는 left, right와 같은 변수들을 매개변수라고 한다.
+
+return을 통해 function이 계산 기능만 하게 하여 다양한 용도로 활용될 수 있도록 할 수 있다.
+-->
